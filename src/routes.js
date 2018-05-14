@@ -4,6 +4,7 @@ import App from './App';
 
 //Containers
 import HomePage from './containers/HomePage';
+import DashboardsPage from './containers/DashboardsPage';
 import LoginPage from './containers/LoginPage';
 import Error404Page from './containers/Error404Page';
 
@@ -12,6 +13,7 @@ const Routes = () => {
         <App>
             <Switch>
                 <Route exact path="/home" component={HomePage} />
+                <Route exact path="/dashboards" component={DashboardsPage} />
                 <Route exact path="/" component={LoginPage} />
                 <Route component={Error404Page} />
             </Switch>

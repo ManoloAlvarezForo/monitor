@@ -2,4 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: linear-gradient(to right top, #051937, #004470, #007490, #00a58a, #23d160);
 }
+
+@import "~bulma/css/bulma.css";
