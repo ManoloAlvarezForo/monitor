@@ -86,16 +86,16 @@ class Login extends React.Component {
               <div style={styles.formTitle}>
                 {this.state.formTitle}
               </div>
-              <div class="group">
+              <div className="group">
                 <input style={styles.inputTextColor} type="text" required />
-                <span class="highlight"></span>
-                <span class="bar"></span>
+                <span className="highlight"></span>
+                <span className="bar"></span>
                 <label>{this.state.userNameText}</label>
               </div>
-              <div class="group">
+              <div className="group">
                 <input style={styles.inputTextColor} type="password" required />
-                <span class="highlight"></span>
-                <span class="bar"></span>
+                <span className="highlight"></span>
+                <span className="bar"></span>
                 <label>{this.state.passwordText}</label>
               </div>
               <br />
