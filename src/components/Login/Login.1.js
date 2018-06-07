@@ -28,29 +28,12 @@ const styles = {
     opacity: '0.85',
     backgroundColor: '#ffffffb3'
   },
-  logoAssetContainer: { 
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   formContainer: {
     height: '500px',
     width: '450px',
     backgroundColor: '#1B1B1B',
     borderRadius: '0 10px 10px 0',
-    opacity: 0.7,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  formSize: { 
-    width: '300px'
-  },
-  formTitle: { 
-    color: 'white',
-    marginBottom: '50px'
+    opacity: 0.7
   },
   place: {
     color: 'white',
@@ -64,38 +47,39 @@ const Login = () => {
     <div style={styles.content}>
       <div style={styles.loginContainer}>
         <div style={styles.logoContainer}>
-          <div style={styles.logoAssetContainer}>
+          <div style={{height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <div>
               <img src={logoAsset} alt="" />
             </div>
           </div>
         </div>
         <div style={styles.formContainer}>
-          <form style={styles.formSize}>
-            <div style={styles.formTitle}>
-              Please login to continue...
+          <form style={{ alignSelf: 'center', padding: '70px' }}>
+            <div style={{ color: 'white', fontSize: '1rem', textAlign: 'center', padding: '45px', fontWeight: 'bold' }}>Please login to continue...</div>
+            <div className="field">
+              <div className="control has-icons-left">
+                <input className="input is-rounded cc" style={styles.place} type="email" placeholder="Username" />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-user-o"></i>
+                </span>
+              </div>
             </div>
-            <div class="group">
-              <input style={{ color: 'white' }} type="text" required />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Username</label>
-            </div>
-            <div class="group">
-              <input style={{ color: 'white' }} type="password" required />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Password</label>
+            <div className="field">
+              <div className="control has-icons-left">
+                <input style={styles.place} className="input is-rounded cc" type="password" placeholder="Password" />
+                <span className="icon is-small is-left">
+                  <i className="fa fa-lock"></i>
+                </span>
+              </div>
             </div>
             <br />
             <div className="l-button">
-              <Link style={{ width: '100%', fontWeight: 'bold' }} className="button is-primary" to='/dashboards'>
-                Log In
+              <Link style={{ width: '100%', fontWeight: 'bold' }} className="is-rounded button is-success is-outlined" to='/dashboards'>
+                Send
             </Link>
             </div>
           </form>
         </div>
-        <div>hello</div>
       </div>
     </div >
   )
