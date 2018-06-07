@@ -28,7 +28,7 @@ const styles = {
     opacity: '0.85',
     backgroundColor: '#ffffffb3'
   },
-  logoAssetContainer: { 
+  logoAssetContainer: {
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -45,60 +45,72 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center'
   },
-  formSize: { 
+  formSize: {
     width: '300px'
   },
-  formTitle: { 
+  formTitle: {
     color: 'white',
     marginBottom: '50px'
   },
-  place: {
-    color: 'white',
-    background: 'none',
-    opacity: 1
+  inputTextColor: {
+    color: 'white'
+  },
+  buttonLogin: {
+    width: '100%'
   }
 }
 
-const Login = () => {
-  return (
-    <div style={styles.content}>
-      <div style={styles.loginContainer}>
-        <div style={styles.logoContainer}>
-          <div style={styles.logoAssetContainer}>
-            <div>
-              <img src={logoAsset} alt="" />
+class Login extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      formTitle: 'Please login to continue...',
+      userNameText: 'Username',
+      passwordText: 'Password',
+      buttonText: 'Log In'
+    }
+  }
+  render() {
+    return (
+      <div style={styles.content}>
+        <div style={styles.loginContainer}>
+          <div style={styles.logoContainer}>
+            <div style={styles.logoAssetContainer}>
+              <div>
+                <img src={logoAsset} alt="" />
+              </div>
             </div>
           </div>
+          <div style={styles.formContainer}>
+            <form style={styles.formSize}>
+              <div style={styles.formTitle}>
+                {this.state.formTitle}
+              </div>
+              <div class="group">
+                <input style={styles.inputTextColor} type="text" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>{this.state.userNameText}</label>
+              </div>
+              <div class="group">
+                <input style={styles.inputTextColor} type="password" required />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>{this.state.passwordText}</label>
+              </div>
+              <br />
+              <div className="l-button">
+                <Link style={styles.buttonLogin} className="button is-primary" to='/dashboards'>
+                  {this.state.buttonText}
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
-        <div style={styles.formContainer}>
-          <form style={styles.formSize}>
-            <div style={styles.formTitle}>
-              Please login to continue...
-            </div>
-            <div class="group">
-              <input style={{ color: 'white' }} type="text" required />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Username</label>
-            </div>
-            <div class="group">
-              <input style={{ color: 'white' }} type="password" required />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Password</label>
-            </div>
-            <br />
-            <div className="l-button">
-              <Link style={{ width: '100%', fontWeight: 'bold' }} className="button is-primary" to='/dashboards'>
-                Log In
-            </Link>
-            </div>
-          </form>
-        </div>
-        <div>hello</div>
-      </div>
-    </div >
-  )
+      </div >
+    )
+  }
 }
+
 
 export default Login;
