@@ -23,7 +23,6 @@ const styles = {
   logoContainer: {
     height: '500px',
     width: '450px',
-    backgroundColor: 'white',
     borderRadius: '10px 0 0 10px',
     opacity: '0.85',
     backgroundColor: '#ffffffb3'
