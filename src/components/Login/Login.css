@@ -1,0 +1,39 @@
+.custom-placeholder::placeholder {
+    color: white;
+    background: none;
+    opacity: 1; /* Firefox */
+}
+
+.custom-placeholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    background: none;
+    opacity: 1; /* Firefox */
+}
+
+.custom-placeholder::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+    background: none;
+    opacity: 1; /* Firefox */
+}
+
+.cc::placeholder{
+    color: white;
+}
+
+.l-button .button.is-success.is-outlined {
+    background-color: transparent;
+    border-color: #3396d1;
+    color: white;
+}
+
+.l-button .button.is-success.is-outlined:hover, .button.is-success.is-outlined:focus {
+    background-color: #3396d1;
+    border-color: #3396d1;
+    color: #fff;
+}
+
+.l-button .button.is-primary {
+    background-color: #3396d1;
+    border-color: transparent;
+    color: #fff;
+}
